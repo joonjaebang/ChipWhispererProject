@@ -47,8 +47,6 @@ def pearson(t, h):
 
     return sum0 / math.sqrt(sum1 * sum2)
 
-    
-
 def maxCorrelation(subByte, keyGuess, traces, plaintext):
     current_max = 0.0
     hamming = np.zeros(len(traces))
@@ -61,7 +59,6 @@ def maxCorrelation(subByte, keyGuess, traces, plaintext):
         correlation = abs(pearson(traceValue, hamming))
         if correlation > current_max:
             current_max = correlation
-        
     return current_max
         
 if __name__ == "__main__":
@@ -75,8 +72,3 @@ if __name__ == "__main__":
         bestKeyGuess[subByte] = correlation.index(max(correlation))
 
     print bestKeyGuess
-        
-                
-                
-                
-                
