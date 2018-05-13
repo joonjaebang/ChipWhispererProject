@@ -29,12 +29,6 @@ if __name__ == "__main__":
                         values.append(float(number[1]))
                     except ValueError:
                         values.append(0.0)
-##                plt.plot(values, linewidth=0.1, c="r")
-##                plt.ion()
-##                plt.show()
-                #if raw_input("Include this trace?: [Y/N]").lower() == 'y':
-##                print len(current_Sum)
-##                print len(values)
                 current_Sum = [current_Sum[i] + values[i] for i in range(0, len(values))]
                 num_Trace += 1
                 plt.close()
